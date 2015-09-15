@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Interns as Interns;
 
 class InternsController extends Controller
 {
@@ -17,6 +18,12 @@ class InternsController extends Controller
     public function index()
     {
         //
+        $details = Interns::paginate(10);
+        $cols = Interns::columns();
+        
+        return view('Categories/home', ["details" => $details, "columns" => $cols]);
+
+
     }
 
     /**
