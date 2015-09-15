@@ -111,7 +111,7 @@ body {
     <!-- /#wrapper -->
     <footer class="footer">
             <br>
-            <center><p>&copy Delta Force</p></center>
+            <center><p>Made with &hearts; by Delta Force</p></center>
     </footer>
     <!-- jQuery -->
     <script src="{{asset('/js/jquery.js')}}"></script>
