@@ -62,7 +62,11 @@
 </div>
 
 @endforeach
-{!! $details->render() !!}
+{!! $details->render() !!}					
+
+
+
+
 </div>
 
 
