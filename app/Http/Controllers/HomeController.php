@@ -30,8 +30,8 @@ class HomeController extends Controller
 
     public function auth(Request $request)
     {
-            $username=explode("@",$request->get('email')); 
-            $username = $username[0];
+            //$username=explode("@",$request->get('email')); 
+            $username = $request->get('username');
             $password=$request->get('password');
             $shellcmd = "python nitt_imap_login.py ".$username." ".$password;
             $imap = shell_exec($shellcmd);

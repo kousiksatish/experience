@@ -11,10 +11,15 @@
 |
 */
 
+Route::group(['middleware' => 'userauth'], function() {
+	Route::get('interns/', 'InternsController@index');	
+});
+
+
 
 Route::get('/', 'HomeController@index');
 Route::get('login', 'HomeController@login');
 Route::get('logout', 'HomeController@logout');
 Route::post('auth', 'HomeController@auth');
 
-Route::get('interns/', 'InternsController@index');
+

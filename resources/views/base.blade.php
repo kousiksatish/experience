@@ -74,14 +74,11 @@ body {
                 @yield('topbar')
           </ul>
           
-          @if(Session::has('user_name'))
-          <ul class="nav navbar-nav navbar-right">
-             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Hi, {{ Session::get('user_name') }}</a></li>
-          </ul>
-          @else
+          @if(Session::has('roll_number'))
           <ul class="nav navbar-nav navbar-right">
              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Hi, {{ Session::get('roll_number') }}</a></li>
           </ul>
+          
           @endif
         
         </div><!--/.nav-collapse -->
