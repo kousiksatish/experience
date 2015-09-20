@@ -1,4 +1,4 @@
-@extends('base')
+@extends('index1')
 
 @section('topbar')
 <li>
