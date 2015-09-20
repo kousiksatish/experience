@@ -12,10 +12,33 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Model::unguard();
-
-        // $this->call(UserTableSeeder::class);
-
-        Model::reguard();
+        DB::table('interns_cols')->insert([
+                "col_no" => "1",
+                "col_name" => "Name of the Internship/scholarship",
+            ]);
+        DB::table('interns_cols')->insert([
+                "col_no" => "2",
+                "col_name" =>"Name and place of university/industry"
+            ]);
+        DB::table('interns_cols')->insert([
+                "col_no" => "3",
+                "col_name" =>"Research project topic"
+            ]);
+        DB::table('interns_cols')->insert([
+                "col_no" => "4",
+                "col_name" =>"Duration of the project"
+            ]);
+        DB::table('interns_cols')->insert([
+                "col_no" => "5",
+                "col_name" =>"How was your work experience?"
+            ]);
+        DB::table('interns_cols')->insert([
+                "col_no" => "6",
+                "col_name" =>"Other experiences worth sharing (travel,food,culture,etc.)"
+            ]);
+        DB::table('interns_cols')->insert([
+                "col_no" => "7",
+                "col_name" =>"What qualities of yours – educational / otherwise, you feel helped you in having an edge over the selection process?"
+            ]);
     }
 }
