@@ -13,6 +13,20 @@ class Interns extends Migration
     public function up()
     {
         //
+        Schema::create('interns', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name',150);
+            $table->integer('rollno');
+            $table->string('department', 50);
+            $table->string('column1', 1000);
+            $table->string('column2', 1000);
+            $table->string('column3', 1000);
+            $table->string('column4', 1000);
+            $table->string('column5', 1000);
+            $table->string('column6', 1000);
+            $table->string('column7', 1000);
+            $table->timestamps();
+        });
     }
 
     /**
