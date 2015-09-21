@@ -1,21 +1,21 @@
 @extends('index1')
 @section('topbar')
 <li>
-    <a href="/"> Home</a>
+    <a href="{{action('HomeController@index')}}"> Home</a>
 </li>
 
 <li>
-    <a href="/interns">Interns</a>
+    <a href="{{action('InternsController@index')}}">Interns</a>
 </li>
 
 @if (Session::has('user_name')||Session::has('roll_number'))
     <li>
-        <a href="/logout" >Logout</a>
+        <a href="{{action('HomeController@logout')}}" >Logout</a>
     </li>
 
 @else
     <li class="active">
-        <a href="/login" >Login</a>
+        <a href="{{action('HomeController@login')}}" >Login</a>
     </li>
 
 @endif
@@ -46,7 +46,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/auth   ') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/auth') }}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                          <div class="form-group">

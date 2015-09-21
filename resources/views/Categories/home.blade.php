@@ -42,6 +42,8 @@
         <h4 class="modal-title">{{$det->name}}, {{$det->department}}</h4>
       </div>
       <div class="modal-body">
+        <b>Contact Number</b>
+        <p>{{$det->rollno}}</p>
       	<b>{{$columns[2]->col_name}}</b>
         <p>{{$det->column3}}</p>
         <b>{{$columns[3]->col_name}}</b>
