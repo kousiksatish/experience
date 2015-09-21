@@ -2,6 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="From what goes into prepping for that entrance test to what makes a successful scholarship application, we hope you'll find all your answers here. Cheers on your first step and good luck! ">
+    <meta property="og:title"
+	  content="Career guidance portal" />
+    <meta property="og:site_name" content="Career guidance portal"/>
+    <meta property="og:url"
+	  content="https://www.pragyan.org/cg/" />
+    <meta property="og:description" content="From what goes into prepping for that entrance test to what makes a successful scholarship application, we hope you'll find all your answers here. Cheers on your first step and good luck! "/>
+    <meta property="og:type"   content="website" />
     <title>@yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
