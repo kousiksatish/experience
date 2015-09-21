@@ -20,7 +20,7 @@ class InternsController extends Controller
         //
         $details = Interns::paginate(10);
         $cols = Interns::columns();
-        $details->setPath('cg/interns');
+        $details->setPath('interns');
         return view('Categories/home', ["details" => $details, "columns" => $cols]);
 
 
