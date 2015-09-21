@@ -1,4 +1,9 @@
 @extends('index1')
+
+@section('title')
+Career Guidance Portal
+@stop
+
 @section('topbar')
 <li>
     <a href="{{action('HomeController@index')}}"> Home</a>
@@ -34,7 +39,7 @@
     <div class="col-lg-12">
         <h1 class="page-header">
            LOGIN
-            <small>Admin</small>
+            <small></small>
         </h1>
         
     </div>
