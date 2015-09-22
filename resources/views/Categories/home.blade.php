@@ -12,6 +12,8 @@
     </div>
 
 </div>
+
+<div class="row">
 <div class="col-sm-10">
 @foreach($details as $det)
 <div class="panel panel-primary">
@@ -19,11 +21,11 @@
 {{$det->name}}, {{$det->department}}
 </div>
 <div class="panel-body">
-<div class="col-sm-10">
+<div class="col-sm-9">
 {{$columns[0]->col_name}} : {{$det->column1}}<br>
 {{$columns[1]->col_name}} : {{$det->column2}}
 </div>
-<div class="col-sm-2">
+<div class="col-sm-3">
 
 <button class= "btn btn-primary" data-toggle="modal" data-target="#modal{{$det->id}}">Read more</button>
 
@@ -70,7 +72,7 @@
 
 
 </div>
-
+</div>
 
 
 
