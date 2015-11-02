@@ -13,6 +13,7 @@ class ExamsController extends Controller
     public function index()
     {
         $details = Exams::paginate(10);
+	$details->setPath('entrance_exams');
         return view('Categories/exams', compact('details'));
     }
 }
