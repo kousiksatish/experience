@@ -9,10 +9,11 @@ Career Guidance Portal
     <a href="{{action('HomeController@index')}}"> Home</a>
 </li>
 
-<li class="active">
+<li>
     <a href="{{action('InternsController@index')}}">Interns</a>
 </li>
-<li>
+
+<li class="active">
     <a href="{{action('ExamsController@index')}}">Entrance Exams</a>
 </li>
 

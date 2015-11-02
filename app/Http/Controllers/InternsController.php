@@ -22,8 +22,6 @@ class InternsController extends Controller
         $cols = Interns::columns();
         $details->setPath('interns');
         return view('Categories/home', ["details" => $details, "columns" => $cols]);
-
-
     }
 
     /**

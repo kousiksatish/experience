@@ -12,6 +12,9 @@ Career Guidance Portal
 <li>
     <a href="{{action('InternsController@index')}}">Interns</a>
 </li>
+<li>
+    <a href="{{action('ExamsController@index')}}">Entrance Exams</a>
+</li>
 
 @if (Session::has('user_name')||Session::has('roll_number'))
     <li>
