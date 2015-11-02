@@ -40,5 +40,6 @@ class DatabaseSeeder extends Seeder
                 "col_no" => "7",
                 "col_name" =>"What qualities of yours – educational / otherwise, you feel helped you in having an edge over the selection process?"
             ]);
+        $this->call(ExamsTableSeeder::class);
     }
 }
