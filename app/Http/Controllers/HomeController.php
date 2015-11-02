@@ -46,7 +46,7 @@ class HomeController extends Controller
                 {
                 Session::put('roll_number',$username);
                 }
-                return Redirect::to('/interns');
+                return Redirect::to('/');
                 
             }
             else
