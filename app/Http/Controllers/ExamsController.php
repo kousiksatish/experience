@@ -10,10 +10,22 @@ use App\Exams as Exams;
 
 class ExamsController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $details = Exams::paginate(10);
-	$details->setPath('entrance_exams');
-        return view('Categories/exams', compact('details'));
+        $exams = ["GRE","GATE","TOEFL","CAT"];
+        $exam = $request->get('exam');
+        if(in_array($exam, $exams))
+        {
+		$details = Exams::where("exam","=",$exam)->paginate(10);
+		$details->setPath('entrance_exams');
+        }
+        else
+        {
+		$details = Exams::paginate(10);
+		$details->setPath('entrance_exams');
+		$exam = "all";
+        }
+        return view('Categories/exams', ['details'=>$details,"exam"=>$exam]);
+        
     }
 }
