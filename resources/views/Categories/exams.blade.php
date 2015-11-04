@@ -8,10 +8,16 @@
            Entrance Exams
             <small>Overview</small>
         </h1>
-        
+        <ul class="nav nav-pills">
+          <li id="all"><a href="{{action('ExamsController@index',['exam' => 'all'])}}">All</a></li>
+          <li id="GRE"><a href="{{action('ExamsController@index',['exam' => 'GRE'])}}">GRE</a></li>
+          <li id="GATE"><a href="{{action('ExamsController@index',['exam' => 'GATE'])}}">GATE</a></li>
+          <li id="TOEFL"><a href="{{action('ExamsController@index',['exam' => 'TOEFL'])}}">TOEFL</a></li>
+          <li id="CAT"><a href="{{action('ExamsController@index',['exam' => 'CAT'])}}">CAT</a></li>
+        </ul>
     </div>
-
 </div>
+<br>
 
 <div class="row">
 <div class="col-sm-10">
@@ -90,15 +96,17 @@
 </div>
 
 @endforeach
-{!! $details->render() !!}					
+{!! $details->appends(['exam' => $exam])->render(); !!}					
 
 
 
 
 </div>
 </div>
-
-
+<script src="{{asset('/js/jquery.js')}}"></script>
+<script>
+  $('#{{$exam}}').addClass('active');
+</script>
 
 @stop
 

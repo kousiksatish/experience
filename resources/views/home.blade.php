@@ -13,7 +13,7 @@
     <a href="{{action('InternsController@index')}}">Interns</a>
   </li>
   <li>
-    <a href="{{action('ExamsController@index')}}">Entrance Exams</a>
+    <a href="{{action('ExamsController@index',['exam' => 'all'])}}">Entrance Exams</a>
 </li>
 
   @if (Session::has('user_name')||Session::has('roll_number'))
@@ -43,7 +43,7 @@
       <p>
 	<a href="{{action('InternsController@index')}}">Click here</a> to view information on internships.
       </p>
-      <p><a href="{{action('ExamsController@index')}}">Click here</a> to view information on preparations for Entrance Exams.</p>
+      <p><a href="{{action('ExamsController@index',['exam' => 'all'])}}">Click here</a> to view information on preparations for Entrance Exams.</p>
     </div>
   </div>
 @stop
